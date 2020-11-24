@@ -51,7 +51,7 @@ export default function App() {
     textLabel = count;
   }
 
-  // UI部分
+  // UI部分｡
   return (
     <View style={styles.container}>
       <View style={styles.CountContainer}>
