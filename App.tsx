@@ -21,7 +21,7 @@ export default function App() {
   let textLabel;
 
   // タマゴ画像の初期値
-  let imageArray = [egg1, egg2, egg3];
+  const imageArray = [egg1, egg2, egg3];
   let eggImage = imageArray[0];
   // タマゴ画像の配列
   if (count <= 70 && count >= 30) {
@@ -40,7 +40,7 @@ export default function App() {
     textLabel = "なかからおとがする｡うまれるまでもうすこしかかりそう";
     //2画像1に変わる
   } else if (count == 50) {
-    textLabel = "たまごがうごいている！もうすぐうまれそう！";
+    textLabel = "うごいている！もうすぐうまれそう！";
     //0画像2に変わる
   } else if (count == 30) {
     textLabel = "おや･･････？";
