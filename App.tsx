@@ -21,28 +21,30 @@ export default function App() {
   let textLabel;
 
   // タマゴ画像の初期値
-  let imageArray = [egg1, egg2, egg3];
+  const imageArray = [egg1, egg2, egg3];
   let eggImage = imageArray[0];
   // タマゴ画像の配列
   if (count <= 70 && count >= 30) {
     eggImage = imageArray[1];
-  } else if (count < 30 && count >= 0) {
+  } else if (count < 30 && count > 0) {
     eggImage = imageArray[1];
+  } else if (count === 0) {
+    eggImage = imageArray[2];
   } else if (count < 0) {
     eggImage = imageArray[2];
   } else {
     eggImage = imageArray[0];
   }
-
+  //JavaScriptはコードが寛容であるため厳密等価演算子を使うのが効果的｡
   //ボタンを押した回数によって文章を変えるif文
   //10画像変わらず
-  if (count == 70) {
+  if (count === 70) {
     textLabel = "なかからおとがする｡うまれるまでもうすこしかかりそう";
     //2画像1に変わる
-  } else if (count == 50) {
-    textLabel = "たまごがうごいている！もうすぐうまれそう！";
+  } else if (count === 50) {
+    textLabel = "うごいている！もうすぐうまれそう！";
     //0画像2に変わる
-  } else if (count == 30) {
+  } else if (count === 30) {
     textLabel = "おや･･････？";
     // dispImage();
   } else if (count < 0) {
@@ -51,7 +53,7 @@ export default function App() {
     textLabel = count;
   }
 
-  // UI部分
+  // UI部分｡
   return (
     <View style={styles.container}>
       <View style={styles.CountContainer}>
