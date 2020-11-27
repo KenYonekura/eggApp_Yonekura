@@ -26,12 +26,11 @@ export default function App() {
   // タマゴ画像の配列
   if (count <= 70 && count >= 30) {
     eggImage = imageArray[1];
-  } else if (count < 30 && count >= ) {
+  } else if (count < 30 && count > 0) {
     eggImage = imageArray[1];
   } else if (count === 0) {
     eggImage = imageArray[2];
-  } 
-  else if (count < 0) {
+  } else if (count < 0) {
     eggImage = imageArray[2];
   } else {
     eggImage = imageArray[0];
